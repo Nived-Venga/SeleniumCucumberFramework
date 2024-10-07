@@ -5,9 +5,18 @@ import java.util.List;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.PageObjectManager;
+import utils.Context;
 
 public class LoginPageStepDefinitions {
+private Context context;
 
+public LoginPageStepDefinitions(Context context) {
+		this.context = context;
+	}
+
+
+	
 	@Given("Test start")
 	public void TestStart() {
 		System.out.println("Automation Started");
@@ -16,7 +25,8 @@ public class LoginPageStepDefinitions {
 	
 	@Given("User navigates to amazonurl")
 	public void UserNavigateToUrl() {
-		System.out.println("User Navigate");
+		context.getDriver().get("https://www.amazon.in/");
+		
 	}
 
 	@Then("Validate Title")
@@ -31,7 +41,9 @@ public class LoginPageStepDefinitions {
 	
 	@Given("User login to amazonurl")
 	public void UserLoginToUrl() {
-		System.out.println("User Navigate");
+	
+		PageObjectManager pageObjectManager = new PageObjectManager(context.getDriver());
+		pageObjectManager.getLoginPageObject().login();
 	}
 
 	@When("^User searches text$")

@@ -1,0 +1,3 @@
+pageObjects\LoginPage.class
+pageObjects\PageObjectManager.class
+pageObjects\HomePage.class
