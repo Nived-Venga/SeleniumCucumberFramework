@@ -4,7 +4,7 @@ import io.cucumber.java.en.Then;
 import utils.Context;
 
 public class HomePageStepDefinitions {
-	
+	//HomePage
 	private Context context;
 
 	public HomePageStepDefinitions(Context context) {
