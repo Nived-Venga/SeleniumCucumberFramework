@@ -1,13 +1,13 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Then;
-import utils.Context;
+import utilities.TestContextSetup;
 
 public class HomePageStepDefinitions {
 	//HomePage
-	private Context context;
+	private TestContextSetup context;
 
-	public HomePageStepDefinitions(Context context) {
+	public HomePageStepDefinitions(TestContextSetup context) {
 			this.context = context;
 		}
 
