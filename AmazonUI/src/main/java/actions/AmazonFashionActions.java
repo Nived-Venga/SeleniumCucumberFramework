@@ -58,7 +58,7 @@ public class AmazonFashionActions {
 			System.out.println("Material : " + material);
 			//assertEquals(material, itemName.contains(material));
 			Assert.assertEquals(material.contains("Denimo"), itemName.contains(material));
-		assertEquals(true, false);
+		//assertEquals(true, false);
 		}
 	}
 }
